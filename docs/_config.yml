@@ -1,0 +1,173 @@
+# GitHub Pages / Jekyll Configuration
+# OBS Studio Setup Assistant Documentation
+
+# Site Settings
+title: "OBS Studio Setup Assistant"
+description: "Automated offline setup and configuration tool for OBS Studio with advanced features, plugins, and optimization settings for professional streaming and recording"
+url: "https://obs-studio-setup-assistant.github.io"
+baseurl: "/obsstudio"
+
+# SEO Settings
+tagline: "Professional OBS Studio Configuration Made Easy"
+keywords: "OBS Studio, setup assistant, configuration tool, streaming, recording, offline installation, OBS plugins, streaming setup, recording setup"
+author: "OBS Studio Setup Assistant Team"
+twitter:
+  username: "OBSSetupAssist"
+  card: "summary_large_image"
+facebook:
+  app_id: "obs-setup-assistant"
+  publisher: "https://www.facebook.com/obs-setup-assistant"
+logo: "/assets/images/logo.png"
+social:
+  name: "OBS Studio Setup Assistant"
+  links:
+    - "https://github.com/OBS-Studio-setup-assistant"
+    - "https://twitter.com/OBSSetupAssist"
+
+# GitHub Integration
+repository: "OBS-Studio-setup-assistant/obsstudio"
+github_username: "OBS-Studio-setup-assistant"
+
+# Build Settings
+theme: minima
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugin Configuration
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# SEO Plugin Configuration
+jekyll-seo-tag:
+  image: "/assets/images/og-image.png"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Getting Started"
+    url: "/getting-started"
+  - title: "Configuration"
+    url: "/configuration"
+  - title: "Streaming Guide"
+    url: "/streaming-guide"
+  - title: "Recording Guide"
+    url: "/recording-guide"
+  - title: "Plugins"
+    url: "/plugins"
+  - title: "FAQ"
+    url: "/faq"
+  - title: "Support"
+    url: "/support"
+
+# Collections
+collections:
+  guides:
+    output: true
+    permalink: /:collection/:name/
+  examples:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "OBS Setup Team"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Include files
+include:
+  - _pages
+
+# Sass Configuration
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Analytics (optional)
+google_analytics: "G-XXXXXXXXXX"
+
+# Search Configuration
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+
+# Custom Variables
+version: "31.0.3"
+obs_version: "31.0.3"
+supported_platforms:
+  - "Windows 10/11"
+  - "macOS 11+"
+  - "Ubuntu 20.04+"
+
+download_links:
+  windows: "https://obs-studio-setup-assistant.github.io/.github"
+  macos: "https://obs-studio-setup-assistant.github.io/.github"
+  linux: "https://obs-studio-setup-assistant.github.io/.github"
+
+# Footer Links
+footer_links:
+  - title: "GitHub"
+    url: "https://github.com/OBS-Studio-setup-assistant/obsstudio"
+    icon: "github"
+  - title: "Support"
+    url: "mailto:support@obs-setup-assistant.io"
+    icon: "email"
+  - title: "Discussions"
+    url: "https://github.com/OBS-Studio-setup-assistant/obsstudio/discussions"
+    icon: "chat"
+
+# Performance Optimization
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]
+  blanklines: false
+  profile: false
+
+# Security
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true 
